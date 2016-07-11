@@ -3,7 +3,7 @@
   <testsuite name="fastlane.lanes">
     
       
-      <testcase classname="fastlane.lanes" name="0: poeditor_export" time="0.00033">
+      <testcase classname="fastlane.lanes" name="0: poeditor_export" time="1.02255">
         
       </testcase>
     

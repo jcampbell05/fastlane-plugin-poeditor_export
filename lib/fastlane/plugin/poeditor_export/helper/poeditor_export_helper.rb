@@ -1,11 +1,23 @@
 module Fastlane
   module Helper
     class PoeditorExportHelper
-      # class methods that you define here become available in your action
-      # as `Helper::PoeditorExportHelper.your_method`
-      #
-      def self.show_message
-        UI.message("Hello from the poeditor_export plugin helper!")
+      API_URL = 'https://poeditor.com/api/'
+      EXPORT_ACTION = 'export'
+
+      def self.export_for_lanaguage(params)
+        uri = URI(API_URL)
+
+        export_params = {
+          api_token: params[:api_token],
+          action: EXPORT_ACTION,
+          id: params[:project_id],
+          type: params[:export_format],
+          language: params[:language]
+        }
+
+        res = Net::HTTP.post_form(uri, export_params)
+        json = JSON.parse(res.body)
+        URI(json["item"])
       end
     end
   end
