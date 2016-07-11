@@ -10,14 +10,12 @@ Gem::Specification.new do |spec|
   spec.email         = %q{james@supmenow.com}
 
   spec.summary       = %q{Exports translations from POEditor.com}
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-poeditor_export"
+  spec.homepage      = "https://github.com/Supmenow/fastlane-plugin-poeditor_export"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
-
-  # spec.add_dependency 'your-dependency', '~> 1.0.0'
 
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'bundler'
