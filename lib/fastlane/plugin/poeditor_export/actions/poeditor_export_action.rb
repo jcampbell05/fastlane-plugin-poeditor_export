@@ -5,8 +5,15 @@ module Fastlane
 
           file_uri = Helper::PoeditorExportHelper.export_for_language(params)      
           res = Net::HTTP.get_response(file_uri)
-
-          File.open(params[:output_path], 'w+') { |file| file.write(res.body) }
+          
+          unless params[:output_path].nil? 
+            output = params[:output_path]
+          else
+            output = params[:language] + '.strings'
+          end
+          
+          File.open(output, 'w+') { |file| file.write(res.body) }
+          
           UI.message('Exported from POEditor!')
       end
 
@@ -47,8 +54,8 @@ module Fastlane
                                       type: String),
           FastlaneCore::ConfigItem.new(key: :output_path,
                                   env_name: "POEDITOR_OUTPUT_PATH",
-                               description: "The output path for exported file",
-                                  optional: false,
+                               description: "The output path for exported file. If not provided, it defaults to the export language with the .strings extension",
+                                  optional: true,
                                       type: String)
         ]
       end
