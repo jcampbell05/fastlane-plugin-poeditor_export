@@ -3,7 +3,7 @@ module Fastlane
     class PoeditorExportAction < Action
       def self.run(params)
 
-          file_uri = Helper::PoeditorExportHelper.export_for_lanaguage(params)
+          file_uri = Helper::PoeditorExportHelper.export_for_language(params)      
           res = Net::HTTP.get_response(file_uri)
 
           File.open(params[:output_path], 'w+') { |file| file.write(res.body) }

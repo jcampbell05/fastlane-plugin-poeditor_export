@@ -3,8 +3,8 @@ module Fastlane
     class PoeditorExportHelper
       API_URL = 'https://poeditor.com/api/'
       EXPORT_ACTION = 'export'
-
-      def self.export_for_lanaguage(params)
+      
+      def self.export_for_language(params)
         uri = URI(API_URL)
 
         export_params = {
