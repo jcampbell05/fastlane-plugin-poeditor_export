@@ -22,7 +22,7 @@ module Fastlane
       end
 
       def self.authors
-        ["James Campbell"]
+        ["James Campbell","Bruno Scheele"]
       end
 
       def self.available_options
