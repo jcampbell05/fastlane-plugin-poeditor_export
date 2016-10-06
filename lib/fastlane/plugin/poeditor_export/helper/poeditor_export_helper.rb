@@ -12,11 +12,16 @@ module Fastlane
           action: EXPORT_ACTION,
           id: params[:project_id],
           type: params[:export_format],
-          language: params[:language]
+          language: params[:language],
         }
+        
+        unless params[:tag].nil?
+          export_params["tags"] = params[:tag]
+        end
 
         res = Net::HTTP.post_form(uri, export_params)
         json = JSON.parse(res.body)
+        
         URI(json["item"])
       end
     end
