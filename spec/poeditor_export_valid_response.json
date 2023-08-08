@@ -1,0 +1,10 @@
+{
+    "response": {
+        "code": "200",
+        "status": "success",
+        "message": "OK"
+    },
+    "result": {
+        "url": "https://google.com"
+    }
+}
