@@ -1,0 +1,7 @@
+{
+    "response": {
+        "code": "404",
+        "status": "fail",
+        "message": "Not OK at all"
+    }
+}

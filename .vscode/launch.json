@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rake spec",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/vendor/bundle/ruby/3.0.0/bin/rake",
+            "args": [
+                "spec"
+            ],
+            // "preLaunchTask": "bundle: install",
+            "showDebuggerOutput": true,
+            "useBundler": true,
+        }
+    ]
+}

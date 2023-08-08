@@ -1,7 +1,7 @@
 lane :test do
   poeditor_export(
-    api_token: "515cb74108a7a2a968aa9b759e2cf581",
-    project_id: "56815",
+    api_token: 'incert_your_api_token',
+    project_id: 'incert_your_project_id',
     export_format: 'apple_strings',
     language: 'en',
     output_path: 'Localizable.strings'
